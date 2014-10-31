@@ -56,12 +56,12 @@ module Pageflow
         redirect_to("http://#{request.host}#{request.fullpath}", :status => :moved_permanently)
       end
     end
-  end
 
-  private
+    private
 
-  def customheaders
-    response.headers["Cache-Control"]= ENV["CACHE_CONTROL"]
-    response.headers["Server"]= ""
+    def customheaders
+      response.headers["Cache-Control"]= ENV["CACHE_CONTROL"]
+      response.headers["Server"]= ""
+    end
   end
 end
