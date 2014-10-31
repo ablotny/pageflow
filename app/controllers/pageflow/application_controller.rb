@@ -8,6 +8,7 @@ module Pageflow
     # Prevent CSRF attacks by raising an exception.
     # For APIs, you may want to use :null_session instead.
     protect_from_forgery with: :exception
+    before_filter :customheaders
 
     include EditLocking
 
@@ -55,5 +56,12 @@ module Pageflow
         redirect_to("http://#{request.host}#{request.fullpath}", :status => :moved_permanently)
       end
     end
+  end
+
+  private
+
+  def customheaders
+    response.headers["Cache-Control"]= ENV["CACHE_CONTROL"]
+    response.headers["Server"]= ""
   end
 end
