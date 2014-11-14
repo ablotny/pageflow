@@ -6,4 +6,12 @@
 <%= tag :meta, :property => "og:description", :name => "description", :content => entry_summary(entry) %>
 <%= tag :meta, :property => "og:url", :content => pretty_entry_url(entry) %>
 <%= tag :meta, :property => "og:site_name", :content => entry.theming.cname_domain %>
-<%= tag :meta, :property => "og:type", :content => "website" %>
+<%= tag :meta, :property => "og:type", :content => "article" %>
+
+<!-- Twitter Meta Tags -->
+<%= tag :meta, :property => "twitter:card", :content => "summary_large_image" %>
+<%= tag :meta, :property => "twitter:site", :content => "@welt" %>
+<%= tag :meta, :property => "twitter:creator", :content => "@MariaMenzel1" %>
+<%= tag :meta, :property => "twitter:title", :content => entry.title + " - eine Multimedia-Reportage" %>
+<%= tag :meta, :property => "twitter:description", :content => entry_summary(entry) %>
+<%= tag :meta, :property => "twitter:image:src", :content => entry.thumbnail_url(:medium).gsub('https://', 'http://') %>
