@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @page_title.presence || 'Pageflow' %></title>
+  <title><%= if @page_title
+                @page_title.presence
+             else
+                'Pageflow' %></title>
   <%= stylesheet_link_tag    "pageflow/application", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag    "pageflow/print_view", media: "print", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "pageflow/application", "data-turbolinks-track" => true %>
