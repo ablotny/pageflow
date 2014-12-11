@@ -66,7 +66,7 @@ module Pageflow
     end
 
     def entry_twitter_username(entry)
-      return entry.users[0].twitter_username
+      return entry.users.first.twitter_username
     end
   end
 end
