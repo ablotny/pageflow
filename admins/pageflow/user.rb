@@ -163,7 +163,7 @@ module Pageflow
       end
 
       def permitted_params
-        result = params.permit(:user => [:first_name, :last_name, :email, :password, :password_confirmation, :account_id, :role])
+        result = params.permit(:user => [:first_name, :last_name, :twitter_username, :email, :password, :password_confirmation, :account_id, :role])
         restrict_attributes(params[:id], result[:user]) if result[:user]
         result
       end
