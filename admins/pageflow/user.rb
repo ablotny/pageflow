@@ -26,6 +26,7 @@ module Pageflow
 
     filter :last_name
     filter :first_name
+    filter :twitter_username
     filter :email
 
     action_item :only => :index do
