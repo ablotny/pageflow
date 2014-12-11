@@ -11,7 +11,8 @@
 <!-- Twitter Meta Tags -->
 <%= tag :meta, :name => "twitter:card", :content => "summary_large_image" %>
 <%= tag :meta, :name => "twitter:site", :content => "@welt" %>
-<%= tag :meta, :name => "twitter:creator", :content => "@MariaMenzel1" %>
+<!--%= tag :meta, :name => "twitter:creator", :content => "@MariaMenzel1" %-->
+<%= tag :meta, :name => "twitter:creator", :content => entry_twitter_username(entry)%>
 <%= tag :meta, :name => "twitter:title", :content => entry.title + " - eine Multimedia-Reportage" %>
 <%= tag :meta, :name => "twitter:description", :content => entry_summary(entry) %>
 <%= tag :meta, :name => "twitter:image:src", :content => entry.thumbnail_url(:medium).gsub('https://', 'http://') %>

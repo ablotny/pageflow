@@ -64,5 +64,9 @@ module Pageflow
       return '' if entry.summary.blank?
       strip_tags(entry.summary.gsub(/<br ?\/?>/, ' ').squish)
     end
+
+    def entry_twitter_username(entry)
+      return entry.users[0].twitter_username
+    end
   end
 end
