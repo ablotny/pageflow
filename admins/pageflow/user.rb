@@ -39,7 +39,7 @@ module Pageflow
           attributes_table_for user do
             row :last_name, :class => 'last_name'
             row :first_name, :class => 'first_name'
-            row :twitter_username
+            row :twitter_username, :class => 'twitter_username'
             row :email, :class => 'email'
             if authorized?(:read, Account)
               row :account, :class => 'account'
