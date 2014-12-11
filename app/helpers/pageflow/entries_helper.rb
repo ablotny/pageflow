@@ -67,7 +67,7 @@ module Pageflow
 
     def entry_twitter_username(entry)
       test = ""
-      entry.users.each do |user|
+      entry.members.each do |user|
         test = test + user.twitter_username
       end
       return test
