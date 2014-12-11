@@ -9,6 +9,7 @@ module Pageflow
       column :full_name, :sortable => 'last_name' do |user|
         link_to(user.full_name, admin_user_path(user))
       end
+      column :twitter_username
       column :email
       if authorized?(:read, Account)
         column :account, :sortable => 'account_id' do |user|
