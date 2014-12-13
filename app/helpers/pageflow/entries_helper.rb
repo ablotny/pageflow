@@ -67,9 +67,7 @@ module Pageflow
 
     def entry_twitter_username(entry)
       test = ""
-        entry.pages.each do |page|
-          test = test + page
-      end
+      test = test + entry.methods
       return test
     end
   end
