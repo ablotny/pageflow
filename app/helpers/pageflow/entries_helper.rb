@@ -67,8 +67,10 @@ module Pageflow
 
     def entry_twitter_username(entry)
       test = ""
-      entry.memberships.each do |user|
-        test = test + user.twitter_username
+      if entry.memberships.any?
+        entry.memberships.each do |user|
+          test = test + user.twitter_username
+        end
       end
       return test
     end
