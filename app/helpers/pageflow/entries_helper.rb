@@ -66,11 +66,12 @@ module Pageflow
     end
 
     def entry_twitter_username(entry)
+      twitter = ""
       entry.entry.users.each do |user|
         twitter = "#{user.twitter_username}"
       end
       puts twitter
-      twitter = "#{entry.entry.users.first.twitter_username}"
+      #twitter = "#{entry.entry.users.first.twitter_username}"
       return twitter
     end
   end
