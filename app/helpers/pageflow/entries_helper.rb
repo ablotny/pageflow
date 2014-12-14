@@ -68,10 +68,15 @@ module Pageflow
     def entry_twitter_username(entry)
       test = ""
       entry.methods.each do |method|
-        test = test + "#{method}"
+        test = test + "#{method} "
       end
       puts test
-      return test
+      test = ""
+      entry.entry.methods.each do |method|
+        test = test + "#{method} "
+      end
+      puts test
+      return "TwitterUser"
     end
   end
 end
