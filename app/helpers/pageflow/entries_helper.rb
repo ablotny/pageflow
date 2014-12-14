@@ -71,21 +71,37 @@ module Pageflow
         test = test + " #{method}"
       end
       puts test
+
       test = "Entry.entry:"
       entry.entry.methods.each do |method|
         test = test + " #{method}"
       end
       puts test
+
       test = "Entry.entry.users: "
       entry.entry.users.methods.each do |method|
         test = test + " #{method}"
       end
       puts test
+
+      test = "Entry.entry.users.each: "
+      entry.entry.users.each do |user|
+        test = test + " #{user}"
+      end
+      puts test
+
       test = "Entry.entry.memberships: "
       entry.entry.memberships.methods.each do |method|
         test = test + " #{method}"
       end
       puts test
+
+      test = "Entry.entry.memberships.each: "
+      entry.entry.memberships.each do |membership|
+        test = test + " #{membership}"
+      end
+      puts test
+
       return "TwitterUser"
     end
   end
