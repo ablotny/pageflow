@@ -86,7 +86,7 @@ module Pageflow
 
       test = "Entry.entry.users.each: "
       entry.entry.users.each do |user|
-        test = test + " #{user}"
+        test = test + " #{user.twitter_username}"
       end
       puts test
 
@@ -98,7 +98,9 @@ module Pageflow
 
       test = "Entry.entry.memberships.each: "
       entry.entry.memberships.each do |membership|
-        test = test + " #{membership}"
+        membership.methods.each do |method|
+        test = test + " #{method}"
+        end
       end
       puts test
 
