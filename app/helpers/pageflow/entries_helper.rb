@@ -66,45 +66,12 @@ module Pageflow
     end
 
     def entry_twitter_username(entry)
-      test = "Entry:"
-      entry.methods.each do |method|
-        test = test + " #{method}"
-      end
-      puts test
-
-      test = "Entry.entry:"
-      entry.entry.methods.each do |method|
-        test = test + " #{method}"
-      end
-      puts test
-
-      test = "Entry.entry.users: "
-      entry.entry.users.methods.each do |method|
-        test = test + " #{method}"
-      end
-      puts test
-
-      test = "Entry.entry.users.each: "
       entry.entry.users.each do |user|
-        test = test + " #{user.twitter_username}"
+        twitter = "#{user.twitter_username}"
       end
-      puts test
-
-      test = "Entry.entry.memberships: "
-      entry.entry.memberships.methods.each do |method|
-        test = test + " #{method}"
-      end
-      puts test
-
-      test = "Entry.entry.memberships.each: "
-      entry.entry.memberships.each do |membership|
-        membership.methods.each do |method|
-        test = test + " #{method}"
-        end
-      end
-      puts test
-
-      return "TwitterUser"
+      puts twitter
+      twitter = "#{entry.entry.users.first.twitter_username}"
+      return twitter
     end
   end
 end
