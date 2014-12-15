@@ -70,7 +70,7 @@ module Pageflow
       entry.entry.users.each do |user|
         twitter = "#{user.twitter_username}"
       end
-      puts twitter
+      #puts twitter
       #twitter = "#{entry.entry.users.first.twitter_username}"
       return twitter
     end
